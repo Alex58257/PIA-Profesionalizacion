@@ -1,0 +1,507 @@
+:root {
+    --background: #080f1c;
+    --background-secondary: #0d1728;
+    --card-background: #111e32;
+    --primary: #168cff;
+    --primary-hover: #0875dc;
+    --white: #ffffff;
+    --text: #e2e8f0;
+    --gray: #94a3b8;
+    --border: #26364d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    background-color: #0b1424;
+    border-bottom: 1px solid var(--border);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.logo_img {
+    width: 110px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navigation a {
+    color: var(--gray);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: var(--primary);
+}
+
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px;
+
+    background: radial-gradient(
+        circle at center,
+        #15345b,
+        #0b172a 55%,
+        #080f1c
+    );
+
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero h2 {
+    color: var(--white);
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    color: var(--gray);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.main-button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+}
+
+/* ==================================
+   SERVICIOS
+================================== */
+
+.services {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.services h2,
+.quotation h2 {
+    text-align: center;
+    font-size: 34px;
+    color: var(--white);
+    margin-bottom: 12px;
+}
+
+.section-description {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 40px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-card h3 {
+    color: var(--white);
+    font-size: 19px;
+    padding: 18px 20px 8px;
+}
+
+.service-card p {
+    color: var(--gray);
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+.service-card .price {
+    display: block;
+    color: #53aaff;
+    font-size: 21px;
+    padding: 17px 20px 20px;
+}
+
+/* ==================================
+   COTIZACIÓN
+================================== */
+
+.quotation {
+    background-color: var(--background-secondary);
+    padding: 75px 5%;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.quotation-summary {
+    max-width: 950px;
+    margin: 30px auto 0;
+    padding: 30px;
+    background-color: var(--card-background);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.quotation-summary h3 {
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.quotation-summary p {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 0;
+    color: var(--gray);
+    border-bottom: 1px solid var(--border);
+}
+
+.quotation-summary h3:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 23px;
+    margin-top: 15px;
+}
+
+#total {
+    color: #53aaff;
+}
+
+/* ==================================
+   SERVICIOS GENERADOS POR JAVASCRIPT
+================================== */
+
+#quotation-services {
+    max-width: 950px;
+    margin: auto;
+}
+
+.quotation-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    padding: 20px;
+    background-color: var(--card-background);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.quotation-info {
+    flex: 1;
+}
+
+.quotation-info label {
+    color: var(--white);
+    font-weight: bold;
+}
+
+.quotation-info p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.quantity-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.service-quantity {
+    width: 80px;
+    padding: 10px;
+    background-color: #0b172a;
+    color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.service-quantity:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.service-quantity:disabled {
+    background-color: #182438;
+    cursor: not-allowed;
+}
+
+/* ==================================
+   BOTONES
+================================== */
+
+.quotation-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.quotation-buttons button {
+    padding: 13px 23px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#calculate-button {
+    background-color: var(--primary);
+    color: white;
+}
+
+#calculate-button:hover {
+    background-color: var(--primary-hover);
+}
+
+#clear-button {
+    background-color: #26364d;
+    color: white;
+    border: 1px solid #40516a;
+}
+
+#clear-button:hover {
+    background-color: #344761;
+}
+
+/* ==================================
+   MENSAJES Y VALIDACIONES
+================================== */
+
+#quotation-message {
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+#quotation-message.error {
+    color: #ef4444;
+}
+
+#quotation-message.success {
+    color: #22c55e;
+}
+
+.service-quantity.input-error {
+    border: 2px solid #ef4444;
+}
+
+/* ==================================
+   PIE DE PÁGINA
+================================== */
+
+.footer {
+    background-color: #070d17;
+    color: var(--gray);
+    text-align: center;
+    padding: 28px 15px;
+    border-top: 1px solid var(--border);
+}
+
+.footer h3 {
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+.footer p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+/* ==================================
+   TABLETS
+================================== */
+
+@media (max-width: 900px) {
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+}
+
+/* ==================================
+   CELULARES
+================================== */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .navigation {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 55px 20px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .services h2,
+    .quotation h2 {
+        font-size: 27px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quotation {
+        padding: 55px 4%;
+    }
+
+    .quotation-summary {
+        padding: 20px;
+    }
+
+    .quotation-item {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .quantity-group {
+        width: 100%;
+    }
+
+    .quotation-buttons {
+        flex-direction: column;
+    }
+
+    .quotation-buttons button {
+        width: 100%;
+    }
+}
+
+
+/* Recuadro del encabezado */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 20px 0;
+    transition: padding 0.3s ease;
+}
+
+/* Reducir únicamente el espacio del recuadro */
+
+.header.compact {
+    padding: 10px 0;
+}
+
+/* Mantener el tamaño original de las letras */
+
+.header .logo {
+    font-size: 27px;
+}
+
+.header .navigation a {
+    font-size: 15px;
+}

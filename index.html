@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Five | Servicios Informáticos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <img class="logo_img" src="imagenes/Logo.jpg" alt="">
+            <h1 class="logo">Soporte Five</h1>
+                <nav class="navigation">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#cotizacion">Cotización</a>
+                </nav> 
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="container hero-content">
+            <h2>La tecnología en buenas manos</h2>
+            <p>Ofrecemos servicios de soporte técnico, mantenimiento y soluciones informáticas para tu equipo de cómputo</p>
+            <a href="#servicios" class="main-button">Conoce nuestros servicios</a>
+        </div>
+    </section>
+
+    <section class="services container" id="servicios">
+        <h2>Nuestros servicios</h2>
+        <p class="section-description">Conoce las soluciones tecnológicas que tenemos para ti</p>
+
+        <div class="service-grid">
+            <article class="service-card">
+                <img src="imagenes/reparacion.jpg" alt="Reparación de computadoras" >
+                <h3>Reparación de computadoras</h3>
+                <p>Diagnóstico y solución de fallas en computadoras de escritorio y laptops. Incluye revisión de componentes y reparación de hardware</p>
+                <strong class="price">$900 MXN</strong>
+            </article>
+
+            <article class="service-card">
+                <img src="imagenes/mantenimiento.jpg" alt="Mantenimiento preventivo">
+                <h3>Mantenimiento preventivo</h3>
+                <p>Limpieza interna y externa del equipo, eliminación del polvo y revisión de componentes para mejorar el rendimiento</p>
+                <strong class="price">$600 MXN</strong>
+            </article>
+
+            <article class="service-card">
+
+                <img
+                    src="imagenes/SO.jpg"
+                    alt="Instalación de sistemas operativos">
+
+                <h3>Instalación de sistemas operativos</h3>
+
+                <p>
+                    Instalación y configuración de sistemas
+                    operativos, controladores y programas
+                    esenciales para el funcionamiento del equipo.
+                </p>
+                <strong class="price">$750 MXN</strong>
+            </article>
+
+            <article class="service-card">
+
+                <img
+                    src="imagenes/virus.jpg"
+                    alt="Seguridad informática">
+
+                <h3>Eliminación de virus y protección informática</h3>
+
+                <p>
+                    Detección y eliminación de software malicioso,
+                    análisis de seguridad y configuración de
+                    herramientas de protección.
+                </p>
+                <strong class="price">$500 MXN</strong>
+            </article>
+
+            <article class="service-card">
+
+                <img
+                    src="imagenes/hardware.jpg"
+                    alt="Actualización de hardware">
+
+                <h3>Actualización de hardware</h3>
+
+                <p>
+                    Instalación o sustitución de componentes
+                    como memoria RAM y unidades SSD para mejorar
+                    la velocidad y el rendimiento del equipo.
+                </p>
+
+                <strong class="price">$1,200 MXN</strong>
+
+            </article>
+        </div>
+    </section>
+
+    <section class="quotation" id="cotizacion">
+        <div class="container">
+            <h2>Solicita tu cotización</h2>
+            <p class="section-description">
+                Selecciona los servicios que necesitas y calcula el costo de tu cotización
+            </p>
+            
+            <div id="quotation-services"></div>
+            
+            <div class="quotation-summary">
+                <h3>Resumen de cotización</h3>
+                
+                <p>Subtotal:
+                    <span id="subtotal">$0.00</span>
+                </p>
+                
+                <p>IVA (16%):
+                    <span id="tax">$0.00</span>
+                </p>
+                
+                <h3>Total:
+                    <span id="total">$0.00</span>
+            </h3>
+
+            <p id="quotation-message" role="alert"></p>
+
+            <div class="quotation-buttons">
+                <button
+                id="calculate-button"
+                type="button">
+                Calcular cotización
+            </button>
+
+                <button 
+                id="clear-button"
+                type="button">
+                Limpiar selección
+            </button>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <h3>Soporte Five</h3>
+            <p>La tecnología en buenas manos</p>
+            <p>&copy 2026 Soporte Five. Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
