@@ -3,149 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Soporte Five: reparación de computadoras, mantenimiento, instalación de sistemas operativos, seguridad informática y actualización de hardware.">
+    <meta name="theme-color" content="#0b1424">
     <title>Soporte Five | Servicios Informáticos</title>
+
+    <!-- Icono de la pestaña -->
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
         <div class="container navbar">
-            <img class="logo_img" src="imagenes/Logo.jpg" alt="">
-            <h1 class="logo">Soporte Five</h1>
-                <nav class="navigation">
+            <a class="brand" href="#inicio" aria-label="Soporte Five, ir al inicio">
+                <picture>
+                    <source srcset="imagenes/Logo.webp" type="image/webp">
+                    <img class="logo_img" src="imagenes/Logo.png" alt="" width="414" height="445">
+                </picture>
+                <span class="logo">Soporte Five</span>
+            </a>
+            <nav class="navigation" aria-label="Principal">
                 <a href="#inicio">Inicio</a>
                 <a href="#servicios">Servicios</a>
-                <a href="#cotizacion">Cotización</a>
-                </nav> 
+                <a href="#carrito" class="nav-quote">Carrito
+                    <span class="nav-count" id="nav-count" hidden>0</span>
+                </a>
+            </nav>
         </div>
     </header>
 
-    <section class="hero" id="inicio">
-        <div class="container hero-content">
-            <h2>La tecnología en buenas manos</h2>
-            <p>Ofrecemos servicios de soporte técnico, mantenimiento y soluciones informáticas para tu equipo de cómputo</p>
-            <a href="#servicios" class="main-button">Conoce nuestros servicios</a>
-        </div>
-    </section>
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>La tecnología en buenas manos</h1>
+                    <p>Ofrecemos servicios de soporte técnico, mantenimiento y soluciones informáticas para tu equipo de cómputo</p>
+                    <div class="hero-actions">
+                        <a href="#servicios" class="main-button">Conoce nuestros servicios</a>
+                    </div>
+                </div>
+                <picture class="hero-mark">
+                    <source srcset="imagenes/Logo.webp" type="image/webp">
+                    <img src="imagenes/Logo.png" alt="Logotipo de Soporte Five: un monitor con circuitos y el número cinco" width="414" height="445">
+                </picture>
+            </div>
+        </section>
 
-    <section class="services container" id="servicios">
-        <h2>Nuestros servicios</h2>
-        <p class="section-description">Conoce las soluciones tecnológicas que tenemos para ti</p>
+        <section class="services container" id="servicios">
+            <h2>Nuestros servicios</h2>
+            <p class="section-description">Elige los que necesitas y agrégalos a tu carrito directamente desde cada tarjeta</p>
 
-        <div class="service-grid">
-            <article class="service-card">
-                <img src="imagenes/reparacion.jpg" alt="Reparación de computadoras" >
-                <h3>Reparación de computadoras</h3>
-                <p>Diagnóstico y solución de fallas en computadoras de escritorio y laptops. Incluye revisión de componentes y reparación de hardware</p>
-                <strong class="price">$900 MXN</strong>
-            </article>
+            <div class="shop">
+            <div class="service-grid">
+                <article class="service-card" data-id="reparacion" data-name="Reparación de computadoras" data-price="900">
+                    <div class="card-media">
+                        <img src="imagenes/reparacion.jpg" alt="Técnico reparando una computadora de escritorio" width="1200" height="800" loading="lazy">
+                        <span class="card-badge" aria-hidden="true">✓ Agregado</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Reparación de computadoras</h3>
+                        <p>Diagnóstico y solución de fallas en computadoras de escritorio y laptops. Incluye revisión de componentes y reparación de hardware</p>
+                        <div class="card-footer">
+                            <strong class="price">$900 <small>MXN</small></strong>
+                            <div class="card-actions"></div>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="service-card">
-                <img src="imagenes/mantenimiento.jpg" alt="Mantenimiento preventivo">
-                <h3>Mantenimiento preventivo</h3>
-                <p>Limpieza interna y externa del equipo, eliminación del polvo y revisión de componentes para mejorar el rendimiento</p>
-                <strong class="price">$600 MXN</strong>
-            </article>
+                <article class="service-card" data-id="mantenimiento" data-name="Mantenimiento preventivo" data-price="600">
+                    <div class="card-media">
+                        <img src="imagenes/mantenimiento.jpg" alt="Limpieza interna de un gabinete de computadora" width="798" height="1200" loading="lazy">
+                        <span class="card-badge" aria-hidden="true">✓ Agregado</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Mantenimiento preventivo</h3>
+                        <p>Limpieza interna y externa del equipo, eliminación del polvo y revisión de componentes para mejorar el rendimiento</p>
+                        <div class="card-footer">
+                            <strong class="price">$600 <small>MXN</small></strong>
+                            <div class="card-actions"></div>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="service-card">
+                <article class="service-card" data-id="sistemas-operativos" data-name="Instalación de sistemas operativos" data-price="750">
+                    <div class="card-media">
+                        <img src="imagenes/SO.jpg" alt="Computadora de escritorio con un sistema operativo instalado" width="1200" height="675" loading="lazy">
+                        <span class="card-badge" aria-hidden="true">✓ Agregado</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Instalación de sistemas operativos</h3>
+                        <p>Instalación y configuración de sistemas operativos, controladores y programas esenciales para el funcionamiento del equipo.</p>
+                        <div class="card-footer">
+                            <strong class="price">$750 <small>MXN</small></strong>
+                            <div class="card-actions"></div>
+                        </div>
+                    </div>
+                </article>
 
-                <img
-                    src="imagenes/SO.jpg"
-                    alt="Instalación de sistemas operativos">
+                <article class="service-card" data-id="virus" data-name="Eliminación de virus y protección informática" data-price="500">
+                    <div class="card-media">
+                        <img src="imagenes/virus.jpg" alt="Persona revisando código en pantallas para detectar software malicioso" width="1200" height="800" loading="lazy">
+                        <span class="card-badge" aria-hidden="true">✓ Agregado</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Eliminación de virus y protección informática</h3>
+                        <p>Detección y eliminación de software malicioso, análisis de seguridad y configuración de herramientas de protección.</p>
+                        <div class="card-footer">
+                            <strong class="price">$500 <small>MXN</small></strong>
+                            <div class="card-actions"></div>
+                        </div>
+                    </div>
+                </article>
 
-                <h3>Instalación de sistemas operativos</h3>
+                <article class="service-card" data-id="hardware" data-name="Actualización de hardware" data-price="1200">
+                    <div class="card-media">
+                        <img src="imagenes/hardware.jpg" alt="Tarjetas de red y módulos de memoria RAM" width="1200" height="800" loading="lazy">
+                        <span class="card-badge" aria-hidden="true">✓ Agregado</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Actualización de hardware</h3>
+                        <p>Instalación o sustitución de componentes como memoria RAM y unidades SSD para mejorar la velocidad y el rendimiento del equipo.</p>
+                        <div class="card-footer">
+                            <strong class="price">$1,200 <small>MXN</small></strong>
+                            <div class="card-actions"></div>
+                        </div>
+                    </div>
+                </article>
+            </div>
 
-                <p>
-                    Instalación y configuración de sistemas
-                    operativos, controladores y programas
-                    esenciales para el funcionamiento del equipo.
-                </p>
-                <strong class="price">$750 MXN</strong>
-            </article>
+            <aside class="cart" id="carrito" aria-label="Carrito de cotización">
+                <div class="cart-header">
+                    <h3>Tu carrito</h3>
+                    <span class="cart-count" id="cart-count">0 servicios</span>
+                </div>
 
-            <article class="service-card">
+                <div id="cart-items" tabindex="-1"></div>
 
-                <img
-                    src="imagenes/virus.jpg"
-                    alt="Seguridad informática">
+                <div class="cart-subtotal">
+                    <span>Subtotal (sin IVA)</span>
+                    <strong id="subtotal">$0.00</strong>
+                </div>
 
-                <h3>Eliminación de virus y protección informática</h3>
+                <button id="checkout-button" class="checkout-button" type="button" disabled>Solicitar cotización</button>
+                <button id="clear-button" class="clear-button" type="button" disabled>Vaciar carrito</button>
+            </aside>
+            </div>
 
-                <p>
-                    Detección y eliminación de software malicioso,
-                    análisis de seguridad y configuración de
-                    herramientas de protección.
-                </p>
-                <strong class="price">$500 MXN</strong>
-            </article>
+            <p class="price-note">Los precios no incluyen IVA. Se suma el 16 % en tu cotización.</p>
+        </section>
 
-            <article class="service-card">
+    </main>
 
-                <img
-                    src="imagenes/hardware.jpg"
-                    alt="Actualización de hardware">
+    <!-- Barra que acompaña mientras se eligen servicios -->
+    <div class="quote-bar" id="quote-bar" hidden>
+        <p class="quote-bar-text">
+            <strong id="bar-count">0 servicios</strong>
+            <span id="bar-subtotal">$0.00</span>
+        </p>
+        <a href="#carrito" class="main-button">Ver carrito</a>
+    </div>
 
-                <h3>Actualización de hardware</h3>
+    <!-- Confirmación de la cotización -->
+    <dialog class="confirm" id="confirm-dialog" aria-labelledby="confirm-title">
+        <div class="confirm-step" id="confirm-review">
+            <h2 id="confirm-title">Confirma tu cotización</h2>
+            <ul class="confirm-list" id="confirm-list"></ul>
 
-                <p>
-                    Instalación o sustitución de componentes
-                    como memoria RAM y unidades SSD para mejorar
-                    la velocidad y el rendimiento del equipo.
-                </p>
+            <dl class="confirm-totals">
+                <div><dt>Subtotal</dt><dd id="confirm-subtotal">$0.00</dd></div>
+                <div><dt>IVA (16%)</dt><dd id="confirm-tax">$0.00</dd></div>
+                <div class="confirm-total"><dt>Total</dt><dd id="confirm-total">$0.00</dd></div>
+            </dl>
 
-                <strong class="price">$1,200 MXN</strong>
+            <p class="confirm-question">¿Aceptas esta cotización?</p>
 
-            </article>
-        </div>
-    </section>
-
-    <section class="quotation" id="cotizacion">
-        <div class="container">
-            <h2>Solicita tu cotización</h2>
-            <p class="section-description">
-                Selecciona los servicios que necesitas y calcula el costo de tu cotización
-            </p>
-            
-            <div id="quotation-services"></div>
-            
-            <div class="quotation-summary">
-                <h3>Resumen de cotización</h3>
-                
-                <p>Subtotal:
-                    <span id="subtotal">$0.00</span>
-                </p>
-                
-                <p>IVA (16%):
-                    <span id="tax">$0.00</span>
-                </p>
-                
-                <h3>Total:
-                    <span id="total">$0.00</span>
-            </h3>
-
-            <p id="quotation-message" role="alert"></p>
-
-            <div class="quotation-buttons">
-                <button
-                id="calculate-button"
-                type="button">
-                Calcular cotización
-            </button>
-
-                <button 
-                id="clear-button"
-                type="button">
-                Limpiar selección
-            </button>
+            <div class="confirm-buttons">
+                <button type="button" class="main-button" id="accept-button">Aceptar</button>
+                <button type="button" class="ghost-button" id="cancel-button">Seguir editando</button>
             </div>
         </div>
-    </div>
-    </section>
+
+        <div class="confirm-step" id="confirm-done" hidden>
+            <div class="done-icon" aria-hidden="true">✓</div>
+            <h2 id="done-title" tabindex="-1">¡Tu compra ha sido procesada!</h2>
+            <p class="done-text">Gracias por confiar en Soporte Five. Total de tu compra:
+                <strong id="done-total">$0.00</strong></p>
+            <div class="confirm-buttons">
+                <button type="button" class="main-button" id="close-button">Cerrar</button>
+            </div>
+        </div>
+    </dialog>
 
     <footer class="footer">
         <div class="container">
             <h3>Soporte Five</h3>
             <p>La tecnología en buenas manos</p>
-            <p>&copy 2026 Soporte Five. Todos los derechos reservados</p>
+            <p>&copy; 2026 Soporte Five. Todos los derechos reservados</p>
         </div>
     </footer>
 
