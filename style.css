@@ -255,6 +255,98 @@ img {
     background-color: rgba(22, 140, 255, 0.12);
 }
 
+/* ==========================================
+   Conócenos
+   ========================================== */
+
+.about-section {
+    background-color: #0B1120; 
+    /* Aumentamos el padding para dar aire arriba y abajo */
+    padding: 100px 20px; 
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.about-container {
+    
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+
+.about-header {
+    text-align: center !important;
+    /* Separación grande entre el título principal y los textos de abajo */
+    margin-bottom: 60px; 
+}
+
+.about-title {
+    color: #FFFFFF !important;
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.about-subtitle {
+    color: #9CA3AF !important; 
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    /* Separación grande entre Misión, Visión y Propósito */
+    gap: 50px; 
+}
+
+
+.about-item {
+    text-align: center !important; 
+}
+
+/* Títulos (Misión, Visión, Propósito) */
+.item-title {
+    color: #3B82F6 !important; 
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Opcional: los hace ver como etiquetas */
+    letter-spacing: 1px;
+}
+
+
+.item-text {
+    color: #D1D5DB !important; 
+    font-size: 1.1rem;
+    line-height: 1.8; /* Mejor altura de línea para leer cómodo */
+    margin: 0;
+}
+
+/* ==========================================
+   Ajustes Mobiles
+   ========================================== */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 60px 20px;
+    }
+    
+    .about-title {
+        font-size: 2.2rem;
+    }
+
+    .about-content {
+        gap: 40px; 
+    }
+
+    .item-title {
+        font-size: 1.5rem;
+    }
+}
+
 /* ==================================
    SERVICIOS
 ================================== */
